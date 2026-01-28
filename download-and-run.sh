@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Download GLM-4.7-Flash-REAP-23B-A3B-UD-Q4_K_XL.gguf model if not present
+# Model path (baked into image during build)
 MODEL_URL="https://huggingface.co/unsloth/GLM-4.7-Flash-REAP-23B-A3B-GGUF/resolve/main/GLM-4.7-Flash-REAP-23B-A3B-UD-Q4_K_XL.gguf"
 MODEL_PATH="/app/GLM-4.7-Flash-REAP-23B-A3B-UD-Q4_K_XL.gguf"
 
@@ -17,7 +17,7 @@ if [ ! -f "$MODEL_PATH" ]; then
     echo "[INFO] Model downloaded successfully!"
     sleep 1
 else
-    echo "[INFO] Model found at $MODEL_PATH"
+    echo "[INFO] Model found at $MODEL_PATH (baked into image)"
     sleep 1
 fi
 
